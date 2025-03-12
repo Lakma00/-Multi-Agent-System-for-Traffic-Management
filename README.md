@@ -1,4 +1,5 @@
 # -Multi-Agent-System-for-Traffic-Management
+
 Traffic Management System
 Overview
 This project is a Traffic Management System that utilizes an ontology-based approach to simulate and manage traffic lights at multiple intersections. The system dynamically adjusts traffic light durations based on real-time traffic density, helping to reduce congestion and improve traffic flow efficiency.
@@ -33,4 +34,6 @@ Future Enhancements
 •	Implement machine learning for predictive traffic management.
 •	Enhance GUI with real-time traffic visualization.
 •	Extend ontology for multi-lane and pedestrian considerations.
+
+
 
