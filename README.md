@@ -34,4 +34,3 @@ Future Enhancements
 •	Enhance GUI with real-time traffic visualization.
 •	Extend ontology for multi-lane and pedestrian considerations.
 
-
