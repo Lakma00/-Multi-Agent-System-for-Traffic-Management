@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sasra/TrafficSystem"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/sasra/TrafficSystem">
+    <Prefix name="" IRI="http://www.semanticweb.org/sasra/TrafficSystem/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Intersection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrafficLight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VehicleFlow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#controlsFlow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTrafficLight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#direction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#greenTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#state"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#trafficDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Intersection1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TrafficLight1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TrafficLight2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VehicleFlow1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VehicleFlow2"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Intersection"/>
+        <NamedIndividual IRI="#Intersection1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TrafficLight"/>
+        <NamedIndividual IRI="#TrafficLight1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TrafficLight"/>
+        <NamedIndividual IRI="#TrafficLight2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VehicleFlow"/>
+        <NamedIndividual IRI="#VehicleFlow1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VehicleFlow"/>
+        <NamedIndividual IRI="#VehicleFlow2"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTrafficLight"/>
+        <NamedIndividual IRI="#Intersection1"/>
+        <NamedIndividual IRI="#TrafficLight1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTrafficLight"/>
+        <NamedIndividual IRI="#Intersection1"/>
+        <NamedIndividual IRI="#TrafficLight2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#controlsFlow"/>
+        <NamedIndividual IRI="#TrafficLight1"/>
+        <NamedIndividual IRI="#VehicleFlow1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#controlsFlow"/>
+        <NamedIndividual IRI="#TrafficLight2"/>
+        <NamedIndividual IRI="#VehicleFlow2"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#direction"/>
+        <NamedIndividual IRI="#TrafficLight1"/>
+        <Literal>North-South</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#greenTime"/>
+        <NamedIndividual IRI="#TrafficLight1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#state"/>
+        <NamedIndividual IRI="#TrafficLight1"/>
+        <Literal>Green</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#direction"/>
+        <NamedIndividual IRI="#TrafficLight2"/>
+        <Literal>East-West</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#greenTime"/>
+        <NamedIndividual IRI="#TrafficLight2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#state"/>
+        <NamedIndividual IRI="#TrafficLight2"/>
+        <Literal>Red</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trafficDensity"/>
+        <NamedIndividual IRI="#VehicleFlow1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trafficDensity"/>
+        <NamedIndividual IRI="#VehicleFlow2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasTrafficLight"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#controlsFlow"/>
+        <Class IRI="#TrafficLight"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTrafficLight"/>
+        <Class IRI="#Intersection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#controlsFlow"/>
+        <Class IRI="#VehicleFlow"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTrafficLight"/>
+        <Class IRI="#TrafficLight"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#direction"/>
+        <Class IRI="#TrafficLight"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#greenTime"/>
+        <Class IRI="#TrafficLight"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#state"/>
+        <Class IRI="#TrafficLight"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#trafficDensity"/>
+        <Class IRI="#VehicleFlow"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#direction"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#greenTime"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#state"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#trafficDensity"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
