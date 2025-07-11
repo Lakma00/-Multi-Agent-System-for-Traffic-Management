@@ -1,53 +1,83 @@
-# -Multi-Agent-System-for-Traffic-Management
+Multi-Agent System for Traffic Management
+
+🚦 Project Overview
+
+This project is a Traffic Management System that uses an ontology-based multi-agent approach to simulate and manage traffic lights across multiple intersections. The system dynamically adjusts green light durations based on real-time traffic density, aiming to reduce congestion and improve traffic flow efficiency.
 
 
-Traffic Management System
-Overview
-This project is a Traffic Management System that utilizes an ontology-based approach to simulate and manage traffic lights at multiple intersections. The system dynamically adjusts traffic light durations based on real-time traffic density, helping to reduce congestion and improve traffic flow efficiency.
-Features
+✨ Key Features
 
-•	Ontology-Based Traffic Simulation: Uses OWL ontology (TrafficSystem.owl) to store and update traffic-related data.
+* Ontology-Based Traffic Simulation
+  Uses `TrafficSystem.owl` (OWL ontology) to store and update traffic-related data.
 
-•	Dynamic Traffic Light Control: Adjusts green light duration based on real-time traffic density
+* Dynamic Traffic Light Control
+  Automatically adjusts green light duration based on real-time traffic density.
 
-•	Traffic Congestion Detection: Identifies high-traffic scenarios and enables coordination between adjacent traffic lights.
+* Traffic Congestion Detection & Coordination
+  Identifies high-traffic scenarios and enables communication between adjacent intersections for coordinated traffic management.
 
-•	Graphical User Interface (GUI): Visual representation of traffic light operations (traffic_interface.py).
+* Graphical User Interface (GUI)
+  Visual representation of intersection traffic light operations (`traffic_interface.py`).
 
-•	Automated Simulation: Runs multiple traffic cycles for testing (traffic_simulation1.py).
+* Automated Traffic Simulation
+  Runs multiple simulation cycles via command line for testing and analysis (`traffic_simulation1.py`).
 
-File Descriptions
+ 📁 File Descriptions
+ 
+`TrafficSystem.owl`      - Ontology file containing the traffic system data.                      
+`traffic_interface.py`   - GUI for visualizing and interacting with traffic light behavior.        
+`traffic_simulation1.py` - Command-line simulation for automated traffic control and coordination. 
 
-•	TrafficSystem.owl: Ontology file containing traffic system data.
+🧰 Requirements
 
-•	traffic_interface.py: A GUI-based system for visualizing traffic light behavior and simulation results.
+Install the required Python libraries:
 
-•	traffic_simulation1.py: A command-line simulation that automates traffic updates and coordination among intersections.
-
-Requirements
-To run this project, install the following dependencies:
 pip install owlready2 tkinter
-How to Run
+
+ 🚀 How to Run
+
 GUI Simulation
-Run the following command to launch the graphical interface:
+
+Launch the graphical user interface:
+
 python traffic_interface.py
-Automated Traffic Simulation
-To run a command-line simulation of traffic behavior, use:
+
+Automated Simulation (Command-Line)
+
+Run the traffic light simulation in the terminal:
+
 python traffic_simulation1.py
 
-How It Works
-1.	Ontology Loading: The system loads the ontology file (TrafficSystem.owl).
-2.	Traffic Light Agents: Each intersection has an agent managing its traffic light based on the ontology data.
-3.	Traffic Sensing: Agents randomly generate traffic density values.
-4.	Green Time Adjustment: If traffic is high, green light duration increases; if low, it decreases.
-5.	Communication Between Intersections: If congestion is detected at adjacent intersections, they coordinate to reduce traffic buildup.
-6.	Ontology Updates: The system saves updated traffic conditions in Updated_TrafficSystem.owl.
 
-Future Enhancements
+⚙️ How It Works
 
-•	Implement machine learning for predictive traffic management.
+1. Ontology Loading
+   The system loads `TrafficSystem.owl` using the `owlready2` library.
 
-•	Enhance GUI with real-time traffic visualization.
+2. Traffic Light Agents
+   Each intersection is managed by an autonomous agent that controls its traffic light based on ontology data.
 
-•	Extend ontology for multi-lane and pedestrian considerations.
+3. Traffic Sensing
+   Agents simulate real-time traffic density using random values.
+
+4. Green Light Adjustment
+
+   * High traffic density → longer green light duration
+   * Low traffic density → shorter green light duration
+
+5. Inter-Agent Communication
+   Neighboring intersections communicate when congestion is detected to synchronize signals and prevent buildup.
+
+6. Ontology Updates
+   After each cycle, updated conditions are saved in `Updated_TrafficSystem.owl`.
+
+
+🔮 Future Enhancements
+
+* Integrate machine learning models for predictive traffic management.
+* Add real-time traffic visualization to the GUI.
+* Extend the ontology to support multi-lane roads, pedestrian crossings, and emergency vehicle priority.
+
+
+
 
